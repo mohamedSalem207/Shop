@@ -193,7 +193,7 @@ header nav div.login-details {
 
 header nav div.help-details {
     right: 15px;
-    top: 40px;
+    top: 82px;
     width: 200px;
 }
 
@@ -823,6 +823,10 @@ p.owner a {
         display:none;
     }
 
+    main div.gallery div.menu-details {
+        display:none;
+    }
+
     main div.gallery {
         width:100%;
         height:270px !important;
@@ -908,6 +912,10 @@ p.owner a {
     }
 
     main div.menu {
+        display:none;
+    }
+
+    main div.gallery div.menu-details {
         display:none;
     }
 
@@ -1017,6 +1025,10 @@ p.owner a {
 
     main div.gallery {
         width:77.5%;
+    }
+
+    main div.gallery div.menu-details {
+        display:none;
     }
 
     main div.menu {
