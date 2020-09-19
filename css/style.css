@@ -173,7 +173,7 @@ header div.help {
 header div.login-details {
     position:absolute;
     top:55px;
-    right:374px;
+    right:405px;
     width:200px;
     min-height:100px;
     padding-top:15px;
@@ -294,7 +294,7 @@ div.options p {
 div.help-details {
     position:absolute;
     top:55px;
-    right:250px;
+    right:290px;
     width:200px;
     min-height:100px;
     background-color:#FFF;
