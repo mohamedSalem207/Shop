@@ -15,6 +15,25 @@ body {
     overflow-x:hidden;
 }
 
+/* The Scroll To Top Button */
+i.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding:10px 13px;
+    background-color:#FFF;
+    font-size:20px;
+    text-align:center;
+    border-radius:50%;
+    cursor: pointer;
+    display:none;
+}
+
+i.scroll-to-top:hover {
+    background-color:#f68b1e;
+    color:#FFF;
+}
+
 /* Strat Of The Container box */
 div.container {
     width:80%;
@@ -334,7 +353,6 @@ main div.container {
 
 /* Strat Of Section Product */
 section.product {
-    margin-bottom:15px;
     overflow:hidden;
 }
 
@@ -376,6 +394,7 @@ section.product div.product-details div.product-image {
 
 section.product div.product-details div.product-image img {
     display:block;
+    object-fit:contain;
     padding-bottom:33px;
     margin-bottom:15px;
     border-bottom:1px solid #CCC;
@@ -573,7 +592,7 @@ section.details div.container {
 }
 
 section.details div.container div.content {
-    width:76.5%;
+    width:77%;
     background-color:#FFF;
     border-radius:5px;
     box-shadow:1px 1px 15px #DDD;
@@ -738,6 +757,10 @@ p.owner a {
         width:100% !important;
     }
 
+    header div.login-details, header div.help-details {
+        right:15px !important;
+    }
+
     footer div.container {
         flex-wrap:wrap;
         align-items:center
@@ -792,7 +815,7 @@ p.owner a {
     }
 
     section.details div.container div.content {
-        width:98%;
+        width:100.5%;
         margin:auto;
         float:none;
     }
@@ -831,6 +854,10 @@ p.owner a {
 
     div.details {
         width:100% !important;
+    }
+
+    header div.login-details, header div.help-details {
+        right:15px !important;
     }
 
     footer div.container {
@@ -904,13 +931,17 @@ p.owner a {
     }
 
     section.details div.container div.content {
-        width:95%;
+        width:100%;
         margin:auto;
         float:none;
     }
 
     section.product div.delivery-details {
         display:none;
+    }
+
+    header div.login-details, header div.help-details {
+        right:15px !important;
     }
 
     footer div.container {
@@ -950,13 +981,21 @@ p.owner a {
     }
 
     section.details div.container div.content {
-        width:90%;
+        width:92%;
         margin:auto;
         float:none;
     }
 
     section.product div.delivery-details {
         display:none;
+    }
+
+    header div.login-details {
+        right:250px !important;
+    }
+
+    header div.help-details {
+        right:135px !important;
     }
 
     footer div.container {
@@ -974,6 +1013,19 @@ p.owner a {
 
     footer div.container { 
         align-items:center
+    }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1500px and up) */
+@media only screen and (min-width: 1500px) {
+
+    header div.login-details {
+        right: 25.3% !important;
+    }
+
+    header div.help-details {
+        right: 17% !important;
     }
 
 }

@@ -16,6 +16,30 @@ $(function() {
 
     });
 
+    $(window).scroll(function() {
+
+        if ($(window).scrollTop() > 100) {
+
+            $("i.scroll-to-top").css("display", "inline");
+
+        } else {
+
+            $("i.scroll-to-top").css("display", "none");
+
+        }
+
+    })
+
+    $("i.scroll-to-top").click(function() {
+
+        $("body, html").animate({
+
+            scrollTop: "0"
+
+        }, 200)
+
+    })
+
     $(document).keydown(function(e) {
 
         if (e.keyCode == 27) {
@@ -61,6 +85,12 @@ $(function() {
             $(this).addClass("active").siblings().removeClass("active");
 
         })
+
+    })
+
+    $("header div.login").click(function(e) {
+
+        e.stopPropagation();
 
     })
 
@@ -194,13 +224,27 @@ $(function() {
 
     })
 
-    $("div.same-height").css("height", "289.6px");
+    var theBiggerHeight = 0;
 
-    $("main div.content a").click(function(e) {
+    if ($("main div.menu").innerHeight() > theBiggerHeight) {
 
-        e.stopPropagation();
+        theBiggerHeight = $("main div.menu").innerHeight();
 
-    })
+        $("div.same-height").css("height", theBiggerHeight);
+
+    } else if ($("main div.gallery").innerHeight() > theBiggerHeight) {
+
+        theBiggerHeight = $("main div.gallery").innerHeight();
+
+        $("div.same-height").css("height", theBiggerHeight);
+    
+    } else if ($("main div.offers").innerHeight() > theBiggerHeight) {
+
+        theBiggerHeight = $("main div.offers").css("height");
+
+        $("div.same-height").css("height", theBiggerHeight);
+
+    }
 
     $("div.menu-details").click(function(e) {
 
@@ -208,7 +252,7 @@ $(function() {
 
     })
 
-    $("main div.content a").hover(function() {
+    $("main div.content div.menu a").hover(function() {
 
         $("div.menu-details").fadeIn(0);
 
@@ -233,62 +277,6 @@ $(function() {
         $(this).fadeOut(0);
 
         $("main div.content a").removeClass("active-menu");
-
-    })
-
-    $("main i.slide-right").each(function() {
-
-        $(this).click(function() {
-
-            $(this).parent().animate({
-
-                right: "+=" + "1175px"
-
-            }, 500, function() {
-
-                $(this).css("visibility", "hidden");
-
-            })
-
-            $(this).parent().siblings().animate({
-
-                right: "+=" + "1175px"
-
-            }, 500, function() {
-
-                $(this).css("visibility", "visible");
-
-            })
-
-        })
-
-    })
-
-    $("main i.slide-left").each(function() {
-
-        $(this).click(function() {
-
-            $(this).parent().animate({
-
-                right: "-=" + "1175px"
-
-            }, 500, function() {
-
-                $(this).css("vsibility", "hidden");
-
-            }) 
-
-            $(this).parent().siblings().animate({
-
-                 right: "-=" + "1175px"
-
-            }, 500)
-
-            // $(this).parent().siblings().css("visibility", "visible");
-
-            $(this).parent().prev().css("visibility", "visible");
-
-        })
 
     })
 
