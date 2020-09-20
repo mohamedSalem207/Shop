@@ -16,6 +16,30 @@ $(function() {
 
     });
 
+    $(window).scroll(function() {
+
+        if ($(window).scrollTop() > 100) {
+
+            $("i.scroll-to-top").css("display", "inline");
+
+        } else {
+
+            $("i.scroll-to-top").css("display", "none");
+
+        }
+
+    })
+
+    $("i.scroll-to-top").click(function() {
+
+        $("body, html").animate({
+
+            scrollTop: "0"
+
+        }, 200)
+
+    })
+
     $(document).keydown(function(e) {
 
         if (e.keyCode == 27) {
@@ -31,6 +55,12 @@ $(function() {
             $("nav.icon-menu").fadeOut(0);
 
         }
+
+    })
+
+    $("header div.login").click(function(e) {
+
+        e.stopPropagation();
 
     })
 
@@ -201,5 +231,25 @@ $(function() {
         e.stopPropagation();
 
     })
+
+    var maxHeight = 0;
+    
+    if ($("section.product div.product-details").innerHeight() > maxHeight) {
+
+        maxHeight = $("section.product div.product-details").innerHeight();
+
+        $("section.product div.product-details").css("height", maxHeight);
+
+        $("section.product div.delivery-details").css("height", maxHeight);
+
+    } else if ($("section.product div.delivery-details").innerHeight() > maxHeight) {
+
+        maxHeight  = $("section.product div.delivery-details").inneHeight();
+
+        $("section.product div.product-details").css("height", maxHeight);
+
+        $("section.product div.delivery-details").css("height", maxHeight);
+
+    }
 
 })
