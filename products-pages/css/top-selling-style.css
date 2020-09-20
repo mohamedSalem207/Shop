@@ -368,6 +368,7 @@ section.product div.container {
 
 section.product div.product-details {
     width:78%;
+    margin-bottom:15px;
 }
 
 section.product div.delivery-details {
