@@ -232,24 +232,4 @@ $(function() {
 
     })
 
-    var maxHeight = 0;
-    
-    if ($("section.product div.product-details").innerHeight() > maxHeight) {
-
-        maxHeight = $("section.product div.product-details").innerHeight();
-
-        $("section.product div.product-details").css("height", maxHeight);
-
-        $("section.product div.delivery-details").css("height", maxHeight);
-
-    } else if ($("section.product div.delivery-details").innerHeight() > maxHeight) {
-
-        maxHeight  = $("section.product div.delivery-details").inneHeight();
-
-        $("section.product div.product-details").css("height", maxHeight);
-
-        $("section.product div.delivery-details").css("height", maxHeight);
-
-    }
-
 })
