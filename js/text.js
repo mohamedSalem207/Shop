@@ -299,8 +299,6 @@ $(function() {
     })
 
     $("div.products-container").scroll(function() {
-
-        console.log($(this).scrollLeft());
         
         if ($(this).scrollLeft() > 0) {
 
