@@ -280,4 +280,67 @@ $(function() {
 
     })
 
+    $("section div.content").hover(function() {
+
+       if ($(this).find("div.products-container").scrollLeft() == 0) {
+
+        $(this).find("i.slide-right").fadeIn(0);
+
+       } else {
+
+        $(this).find("i").fadeIn(0);
+
+       }
+
+    }, function() {
+
+        $(this).find("i").fadeOut(0);
+
+    })
+
+    $("div.products-container").scroll(function() {
+        
+        if ($(this).scrollLeft() > 0) {
+
+            $(this).find("i.slide-left").fadeIn(0);
+
+        } else if ($(this).scrollLeft() == 0) {
+
+            $(this).find("i.slide-left").fadeOut(0);
+
+        }
+
+        if ($(this).scrollLeft() == "2392") {
+
+            $(this).find("i.slide-right").fadeOut(0);
+
+        } else {
+
+            $(this).find("i.slide-right").fadeIn(0);
+
+        }
+        
+
+    })
+
+    $("i.slide-right").click(function() {
+
+        $(this).parent().animate({
+
+            scrollLeft:  "+=" + ($(this).parent().width() - $(this).parent().width() / 3)
+
+        }, 700)
+
+    })
+
+    $("i.slide-left").click(function() {
+
+        $(this).parent().animate({
+
+            scrollLeft:  "-=" + ($(this).parent().width() - $(this).parent().width()/3)
+
+        }, 700)
+
+    })
+
 })
