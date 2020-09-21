@@ -288,7 +288,7 @@ $(function() {
 
        } else {
 
-        if ($(this).find("div.products-container").scrollLeft() > "2390") {
+        if ($(this).find("div.products-container").scrollLeft() > $(this).width() * 2 - 20) {
 
             $(this).find("i.slide-right").fadeOut(0);
 
@@ -308,31 +308,97 @@ $(function() {
 
     })
 
-    $("div.products-container").scroll(function() {
-        
-        if ($(this).scrollLeft() > 0) {
+   $("section div.content").hover(function() {
 
-            $(this).find("i.slide-left").fadeIn(0);
+    if ($(this).find("div.products-container").scrollLeft() == 0) {
 
-        } else if ($(this).scrollLeft() == 0) {
+        $(this).find("i.slide-right").fadeIn(0)
 
-            $(this).find("i.slide-left").fadeOut(0);
+    } else if ($(this).find("div.products-container").scrollLeft() > 5) {
 
-        }
-        
-        if ($(this).scrollLeft() > "2390") {
+        $(this).find("i.slide-right").fadeIn(0);
 
-            $(this).find("i.slide-right").fadeOut(0);
+        $(this).find("i.slide-left").fadeIn(0)
+    
+    }
 
+   }, function() {
+
+    $(this).find("i").fadeOut(0)
+
+   })
+
+   $("div.products-container").scroll(function() {
+
+    console.log($(this).scrollLeft());
+
+    if ($(this).scrollLeft() > 0) {
+
+        $("i.slide-left").fadeIn(0);
+
+        $("i.slide-right").fadeIn(0)
+
+    } else if ($(this).scrollLeft() == 0) {
+
+        $("i.slide-left").fadeOut(0);
+
+        $("i.slide-right").fadeIn(0);
+
+    }
+
+    if ($(window).innerWidth() >= 1200) {
+
+        if ($(this).scrollLeft() > 2390) {
+
+            $("i.slide-right").fadeOut(0);
+    
         } else {
+    
+            $("i.slide-right").fadeIn(0);
+    
+        }   
 
-            $(this).find("i.slide-right").fadeIn(0);
+    } else if ($(window).innerWidth() >= 992) {
 
+        if ($(this).scrollLeft() > 3427) {
+
+            $("i.slide-right").fadeOut(0);
+    
+        } else {
+    
+            $("i.slide-right").fadeIn(0);
+    
+        } 
+
+    } else if ($(window).innerWidth() >= 768) {
+
+        if ($(this).scrollLeft() > 4004) {
+
+            $("i.slide-right").fadeOut(0);
+    
+        } else {
+    
+            $("i.slide-right").fadeIn(0);
+    
         }
 
-    })
+    } else if ($(window).innerWidth() <= 600) {
 
-    $("i.slide-right").click(function() {
+        if ($(this).scrollLeft() > 4506) {
+
+            $("i.slide-right").fadeOut(0);
+    
+        } else {
+    
+            $("i.slide-right").fadeIn(0);
+    
+        }
+
+    }
+
+   })
+
+   $("i.slide-right").click(function() {
 
         $(this).parent().animate({
 
