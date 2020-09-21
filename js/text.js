@@ -299,6 +299,8 @@ $(function() {
     })
 
     $("div.products-container").scroll(function() {
+
+        console.log($(this).scrollLeft());
         
         if ($(this).scrollLeft() > 0) {
 
@@ -309,8 +311,8 @@ $(function() {
             $(this).find("i.slide-left").fadeOut(0);
 
         }
-
-        if ($(this).scrollLeft() == "2392") {
+        
+        if ($(this).scrollLeft() > "2390") {
 
             $(this).find("i.slide-right").fadeOut(0);
 
@@ -319,7 +321,6 @@ $(function() {
             $(this).find("i.slide-right").fadeIn(0);
 
         }
-        
 
     })
 
@@ -327,7 +328,7 @@ $(function() {
 
         $(this).parent().animate({
 
-            scrollLeft:  "+=" + ($(this).parent().width() - $(this).parent().width() / 3)
+            scrollLeft:  "+=" + $(this).parent().innerWidth()
 
         }, 700)
 
@@ -337,7 +338,7 @@ $(function() {
 
         $(this).parent().animate({
 
-            scrollLeft:  "-=" + ($(this).parent().width() - $(this).parent().width()/3)
+            scrollLeft:  "-=" + $(this).parent().innerWidth()
 
         }, 700)
 
