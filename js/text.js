@@ -288,7 +288,17 @@ $(function() {
 
        } else {
 
-        $(this).find("i").fadeIn(0);
+        if ($(this).find("div.products-container").scrollLeft() > "2390") {
+
+            $(this).find("i.slide-right").fadeOut(0);
+
+            $(this).find("i.slide-left").fadeIn(0);
+
+        } else {
+
+            $(this).find("i").fadeIn(0);
+        
+        }
 
        }
 
