@@ -349,6 +349,7 @@ main div.container {
 
 main div.content {
     margin:auto;
+    overflow:hidden;
 }
 
 main div.menu {
@@ -544,12 +545,12 @@ div.container div.content h3 {
 div.products {
     width:100%;
     position:relative;
-    overflow:hidden;
 }
 
 div.products-container {
     width:100%;
     display:flex;
+    align-items:center;
     overflow-x:scroll;
 }
 
@@ -566,6 +567,7 @@ div.products-container i {
     padding:10px 15px;
     border-radius:50%;
     cursor:pointer;
+    display:none;
 }
 
 div.products-container i.slide-right {
@@ -583,12 +585,21 @@ div.products-container i:hover {
 }
 
 div.products-container div {
-    padding: 0px 2px 20px;
+    padding: 0px 2px 20px 2px;
     margin-bottom:15px;
     flex:0 0 14.67%;
-    margin-left:1%;
     margin-right:1%;
+    margin-left:1%;
     overflow:hidden;
+}
+
+div.products-container div.last {
+    margin-right:-0.3%;
+}
+
+div.products-container div.spare {
+    flex:0 0 0% !important;
+    visibility:hidden;
 }
 
 div.products div.products-container img {
