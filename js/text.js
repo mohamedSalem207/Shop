@@ -280,141 +280,181 @@ $(function() {
 
     })
 
-    $("section div.content").hover(function() {
-
-       if ($(this).find("div.products-container").scrollLeft() == 0) {
-
-        $(this).find("i.slide-right").fadeIn(0);
-
-       } else {
-
-        if ($(this).find("div.products-container").scrollLeft() > $(this).width() * 2 - 20) {
-
-            $(this).find("i.slide-right").fadeOut(0);
-
-            $(this).find("i.slide-left").fadeIn(0);
-
-        } else {
-
-            $(this).find("i").fadeIn(0);
-        
-        }
-
-       }
-
-    }, function() {
-
-        $(this).find("i").fadeOut(0);
-
-    })
-
-   $("section div.content").hover(function() {
-
-    if ($(this).find("div.products-container").scrollLeft() == 0) {
-
-        $(this).find("i.slide-right").fadeIn(0)
-
-    } else if ($(this).find("div.products-container").scrollLeft() > 5) {
-
-        $(this).find("i.slide-right").fadeIn(0);
-
-        $(this).find("i.slide-left").fadeIn(0)
-    
-    }
-
-   }, function() {
-
-    $(this).find("i").fadeOut(0)
-
-   })
-
-   $("div.products-container").scroll(function() {
-
-    console.log($(this).scrollLeft());
-
-    if ($(this).scrollLeft() > 0) {
-
-        $("i.slide-left").fadeIn(0);
-
-        $("i.slide-right").fadeIn(0)
-
-    } else if ($(this).scrollLeft() == 0) {
-
-        $("i.slide-left").fadeOut(0);
-
-        $("i.slide-right").fadeIn(0);
-
-    }
-
     if ($(window).innerWidth() >= 1200) {
 
-        if ($(this).scrollLeft() > 2390) {
+        $("section div.content").hover(function() {
 
-            $("i.slide-right").fadeOut(0);
-    
-        } else {
-    
-            $("i.slide-right").fadeIn(0);
-    
-        }   
+            if ($(this).find("div.products-container").scrollLeft() == 0) {
 
-    } else if ($(window).innerWidth() >= 992) {
+                $(this).find("div.products-container").find("i.slide-left").fadeOut(0);
 
-        if ($(this).scrollLeft() > 3427) {
+                $(this).find("div.products-container").find("i.slide-right").fadeIn(0);
 
-            $("i.slide-right").fadeOut(0);
-    
-        } else {
-    
-            $("i.slide-right").fadeIn(0);
-    
-        } 
+            } else {
 
-    } else if ($(window).innerWidth() >= 768) {
+                $(this).find("div.products-container").find("i.slide-right").fadeIn(0);
 
-        if ($(this).scrollLeft() > 4004) {
+                $(this).find("div.products-container").find("i.slide-left").fadeIn(0);
 
-            $("i.slide-right").fadeOut(0);
-    
-        } else {
-    
-            $("i.slide-right").fadeIn(0);
-    
-        }
+            }
 
+            if ($(this).find("div.products-container").scrollLeft() > $(this).find("div.products-container").outerWidth()*2-20) {
+
+                $(this).find("div.products-container").find("i.slide-right").fadeOut(0);
+
+                $(this).find("div.products-container").find("i.slide-left").fadeIn(0);
+
+            }
+
+        }, function() {
+
+            $(this).find("div.products-container").find("i.slide-right").fadeOut(0);
+
+            $(this).find("div.products-container").find("i.slide-left").fadeOut(0);
+
+        })
+
+        $("div.products-container").scroll(function() {
+
+            if ($(this).scrollLeft() == 0) {
+
+                $(this).find("i.slide-left").fadeOut(0);
+
+                $(this).find("i.slide-right").fadeIn(0);
+
+            } else {
+
+                $(this).find("i.slide-right").fadeIn(0);
+
+                $(this).find("i.slide-left").fadeIn(0);
+
+            }
+
+            if ($(this).scrollLeft() > $(this).outerWidth() * 2 - 20) {
+
+                $(this).find("i.slide-right").fadeOut(0);
+
+                $(this).find("i.slide-left").fadeIn(0);
+
+            }
+
+        })
+
+    } else if ($(window).innerWidth() >= 992 && $(window).innerWidth() < 1200) {
+        
+        $("div.products-container").scroll(function() {
+
+            if ($(this).scrollLeft() == 0) {
+
+                $(this).find("i.slide-left").fadeOut(0);
+
+            } else if ($(this).scrollLeft() > 0) {
+
+                $(this).find("i.slide-right").fadeIn(0);
+
+                $(this).find("i.slide-left").fadeIn(0);
+
+            }
+            
+            if ($(this).scrollLeft() >= $(window).innerWidth() * 3.4) {
+
+                $(this).find("i.slide-right").fadeOut(0);
+
+            }
+
+        })
+
+    } else if ($(window).innerWidth() > 767 && $(window).innerWidth() < 992) {
+
+        $("div.products-container").scroll(function() {
+
+            if ($(this).scrollLeft() == 0) {
+
+                $(this).find("i.slide-left").fadeOut(0);
+
+            } else if ($(this).scrollLeft() > 0) {
+
+                $(this).find("i.slide-right").fadeIn(0);
+
+                $(this).find("i.slide-left").fadeIn(0);
+
+            }
+            
+            if ($(this).scrollLeft() >= $(window).innerWidth() * 6 - 900) {
+
+                $(this).find("i.slide-right").fadeOut(0);
+
+            }
+
+        })       
+
+    } else if ($(window).innerWidth() > 600 && $(window).innerWidth() <= 767) {
+        
+        $("div.products-container").scroll(function() {
+
+            if ($(this).scrollLeft() == 0) {
+
+                $(this).find("i.slide-left").fadeOut(0);
+
+            } else if ($(this).scrollLeft() > 0) {
+
+                $(this).find("i.slide-right").fadeIn(0);
+
+                $(this).find("i.slide-left").fadeIn(0);
+
+            }
+            
+            if ($(this).scrollLeft() >= $(window).innerWidth() * 6 - 880) {
+
+                $(this).find("i.slide-right").fadeOut(0);
+
+            }
+
+        })
+        
     } else if ($(window).innerWidth() <= 600) {
 
-        if ($(this).scrollLeft() > 4506) {
+        $("div.products-container").scroll(function() {
 
-            $("i.slide-right").fadeOut(0);
-    
-        } else {
-    
-            $("i.slide-right").fadeIn(0);
-    
-        }
+            if ($(this).scrollLeft() == 0) {
+
+                $(this).find("i.slide-left").fadeOut(0);
+
+            } else if ($(this).scrollLeft() > 0) {
+
+                $(this).find("i.slide-right").fadeIn(0);
+
+                $(this).find("i.slide-left").fadeIn(0);
+
+            }
+            
+            if ($(this).scrollLeft() >= $(window).innerWidth() * 8 - 200) {
+
+                $(this).find("i.slide-right").fadeOut(0);
+
+            }
+
+        })
 
     }
 
-   })
-
-   $("i.slide-right").click(function() {
+    $("div.products-container i.slide-right").click(function() {
 
         $(this).parent().animate({
 
-            scrollLeft:  "+=" + $(this).parent().innerWidth()
+            scrollLeft: "+=" + $(this).parent().innerWidth()
 
-        }, 700)
+        }, 500)
 
     })
 
-    $("i.slide-left").click(function() {
+    $("div.products-container i.slide-left").click(function() {
 
         $(this).parent().animate({
 
-            scrollLeft:  "-=" + $(this).parent().innerWidth()
+            scrollLeft: "-=" + $(this).parent().innerWidth()
 
-        }, 700)
+        }, 500)
 
     })
 
