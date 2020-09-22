@@ -320,6 +320,10 @@ $(function() {
 
             $(this).find("div.products-container").css("overflow-x", "hidden");
 
+        }, function() {
+
+            $(this).find("div.products-container").css("overflow-x", "scroll");
+
         })
 
         $("div.products-container").scroll(function() {
@@ -370,6 +374,16 @@ $(function() {
 
             }
 
+            $("section.brands div.products-container").scroll(function() {
+
+                if ($(this).scrollLeft() > $(window).innerWidth() / 2) {
+
+                    $(this).find("i.slide-right").fadeOut(0);
+
+                }
+
+            })
+
         })
 
     } else if ($(window).innerWidth() > 767 && $(window).innerWidth() < 992) {
@@ -394,6 +408,16 @@ $(function() {
 
             }
 
+            $("section.brands div.products-container").scroll(function() {
+
+                if ($(this).scrollLeft() > $(window).innerWidth() - 20) {
+
+                    $(this).find("i.slide-right").fadeOut(0);
+
+                }
+
+            })
+
         })       
 
     } else if ($(window).innerWidth() > 600 && $(window).innerWidth() <= 767) {
@@ -417,6 +441,16 @@ $(function() {
                 $(this).find("i.slide-right").fadeOut(0);
 
             }
+
+            $("section.brands div.products-container").scroll(function() {
+
+                if ($(this).scrollLeft() >= $(window).innerWidth() - 30) {
+
+                    $(this).find("i.slide-right").fadeOut(0);
+
+                }
+
+            })
 
         })
         
@@ -468,52 +502,16 @@ $(function() {
 
     $("section.brands div.products-container").scroll(function() {
 
-        if ($(window).innerWidth() > 600 && $(window).innerWidth() < 1200) {
+        if ($(window).innerWidth() <= 600) {
 
-            $("secton.brands div.products-container").scroll(function() {
+            $(this).scroll(function() {
 
-                if ($(this).scrollLeft() == 0) {
-    
-                    $(this).find("i.slide-left").fadeOut(0);
-    
-                } else if ($(this).scrollLeft() > 0) {
-    
-                    $(this).find("i.slide-right").fadeIn(0);
-    
-                    $(this).find("i.slide-left").fadeIn(0);
-    
-                }
-                
-                if ($(this).scrollLeft() >= $(window).innerWidth() / 2) {
-    
-                    $(this).find("i.slide-right").fadeOut(0);
-    
-                }
-    
-            })
-
-        }  else if ($(window).innerWidth() <= 600) {
-
-            $("section.brands div.products-container").scroll(function() {
-
-                if ($(this).scrollLeft() == 0) {
-    
-                    $(this).find("i.slide-left").fadeOut(0);
-    
-                } else if ($(this).scrollLeft() > 0) {
-    
-                    $(this).find("i.slide-right").fadeIn(0);
-    
-                    $(this).find("i.slide-left").fadeIn(0);
-    
-                }
-                
                 if ($(this).scrollLeft() >= $(window).innerWidth() * 1.5 + 200) {
-    
-                    $(this).find("i.slide-right").fadeOut(0);
-    
+
+                    $(this).find("i.slide-right").fadeOut(0)
+
                 }
-    
+
             })
 
         }
