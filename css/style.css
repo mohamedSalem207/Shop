@@ -25,6 +25,7 @@ i.scroll-to-top {
     font-size:20px;
     text-align:center;
     border-radius:50%;
+    z-index:100;
     cursor: pointer;
     display:none;
 }
