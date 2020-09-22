@@ -314,6 +314,14 @@ $(function() {
 
         })
 
+        $("section.brands div.content").hover(function() {
+
+            $(this).find("div.products-container").find("i").fadeOut(0);
+
+            $(this).find("div.products-container").css("overflow-x", "hidden");
+
+        })
+
         $("div.products-container").scroll(function() {
 
             if ($(this).scrollLeft() == 0) {
