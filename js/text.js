@@ -458,4 +458,58 @@ $(function() {
 
     })
 
+    $("section.brands div.products-container").scroll(function() {
+
+        if ($(window).innerWidth() > 600 && $(window).innerWidth() < 1200) {
+
+            $("secton.brands div.products-container").scroll(function() {
+
+                if ($(this).scrollLeft() == 0) {
+    
+                    $(this).find("i.slide-left").fadeOut(0);
+    
+                } else if ($(this).scrollLeft() > 0) {
+    
+                    $(this).find("i.slide-right").fadeIn(0);
+    
+                    $(this).find("i.slide-left").fadeIn(0);
+    
+                }
+                
+                if ($(this).scrollLeft() >= $(window).innerWidth() / 2) {
+    
+                    $(this).find("i.slide-right").fadeOut(0);
+    
+                }
+    
+            })
+
+        }  else if ($(window).innerWidth() <= 600) {
+
+            $("section.brands div.products-container").scroll(function() {
+
+                if ($(this).scrollLeft() == 0) {
+    
+                    $(this).find("i.slide-left").fadeOut(0);
+    
+                } else if ($(this).scrollLeft() > 0) {
+    
+                    $(this).find("i.slide-right").fadeIn(0);
+    
+                    $(this).find("i.slide-left").fadeIn(0);
+    
+                }
+                
+                if ($(this).scrollLeft() >= $(window).innerWidth() * 1.5 + 200) {
+    
+                    $(this).find("i.slide-right").fadeOut(0);
+    
+                }
+    
+            })
+
+        }
+
+    })
+
 })
