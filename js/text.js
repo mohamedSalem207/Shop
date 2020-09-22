@@ -376,7 +376,7 @@ $(function() {
 
             $("section.brands div.products-container").scroll(function() {
 
-                if ($(this).scrollLeft() > $(window).innerWidth() / 2) {
+                if ($(this).scrollLeft() > $(window).innerWidth() / 2 - 20) {
 
                     $(this).find("i.slide-right").fadeOut(0);
 
@@ -410,7 +410,7 @@ $(function() {
 
             $("section.brands div.products-container").scroll(function() {
 
-                if ($(this).scrollLeft() > $(window).innerWidth() - 20) {
+                if ($(this).scrollLeft() > $(window).innerWidth() - 50) {
 
                     $(this).find("i.slide-right").fadeOut(0);
 
@@ -444,7 +444,7 @@ $(function() {
 
             $("section.brands div.products-container").scroll(function() {
 
-                if ($(this).scrollLeft() >= $(window).innerWidth() - 30) {
+                if ($(this).scrollLeft() > $(window).innerWidth() - 50) {
 
                     $(this).find("i.slide-right").fadeOut(0);
 
@@ -476,6 +476,16 @@ $(function() {
 
             }
 
+            $("section.brands div.products-container").scroll(function() {
+
+                if ($(this).scrollLeft() > $(window).innerWidth() * 2 - 110) {
+
+                    $(this).find("i.slide-right").fadeOut(0);
+
+                }
+
+            })
+
         })
 
     }
@@ -497,24 +507,6 @@ $(function() {
             scrollLeft: "-=" + $(this).parent().innerWidth()
 
         }, 500)
-
-    })
-
-    $("section.brands div.products-container").scroll(function() {
-
-        if ($(window).innerWidth() <= 600) {
-
-            $(this).scroll(function() {
-
-                if ($(this).scrollLeft() >= $(window).innerWidth() * 1.5 + 200) {
-
-                    $(this).find("i.slide-right").fadeOut(0)
-
-                }
-
-            })
-
-        }
 
     })
 
