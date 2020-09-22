@@ -368,7 +368,6 @@ section.product div.container {
 
 section.product div.product-details {
     width:78%;
-    margin-bottom:15px;
 }
 
 section.product div.delivery-details {
@@ -501,7 +500,7 @@ section.product div.product-details div.price p span:last-of-type {
     text-align: center;
     position: relative;
     top: -19px;
-    left: 100px;
+    left: 75px;
     border-radius: 2px;
 }
 
@@ -575,8 +574,7 @@ div.delivery-details ul {
 }
 
 div.delivery-details ul li {
-    list-style-type:circle;
-    padding-left:28px;
+    margin-left:20px;
     margin-top:5px;
     font-size:13px;
 }
@@ -584,6 +582,7 @@ div.delivery-details ul li {
 
 /* Strat Of Section Details */
 section.details {
+    margin-top:15px;
     margin-bottom:15px;
     overflow:hidden;
 }
@@ -614,6 +613,7 @@ section.details div.container div.content div {
 
 section.details div.container div.content div li {
     margin-top:5px;
+    margin-left:20px;
 }
 
 section.details div.container div.content div.last-details {
@@ -1022,11 +1022,11 @@ p.owner a {
 @media only screen and (min-width: 1500px) {
 
     header div.login-details {
-        right: 26.3% !important;
+        right: 25.3% !important;
     }
 
     header div.help-details {
-        right: 19% !important;
+        right: 17% !important;
     }
 
 }
