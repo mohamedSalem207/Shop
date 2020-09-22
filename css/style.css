@@ -531,13 +531,13 @@ section.top-items {
 
 section.top-items div.container div.content {
     background-color:#FFF;
-    padding:10px;
     border-radius:5px;
     box-shadow:1px 1px 15px #DDD;
     overflow:hidden;
 }
 
 div.container div.content h3 {
+    padding:5px 10px;
     letter-spacing:1px;
     margin-bottom:15px;
 }
@@ -809,6 +809,10 @@ p.owner a {
         width:100%;
     }
 
+    section div.products-container i.slide-right {
+        display:inline;
+    }
+
     div.products-container div {
         flex: 0 0 48%;
     }
@@ -886,8 +890,12 @@ p.owner a {
         width:100%;
     }
 
+    section div.products-container i.slide-right {
+        display:inline;
+    }
+
     div.products-container div {
-        flex: 0 0 33.3%;
+        flex: 0 0 31.3%;
     }
 
     section div.container {
@@ -985,6 +993,10 @@ p.owner a {
         padding:10px !important;
     }
 
+    section div.products-container i.slide-right {
+        display:inline;
+    }
+
     div.offers {
         display:none;
     }
@@ -1000,7 +1012,7 @@ p.owner a {
     }
 
     div.products-container div {
-        flex: 0 0 33.3%;
+        flex: 0 0 31.3%;
     }
 
     footer div.container {
@@ -1030,6 +1042,10 @@ p.owner a {
         width:100% !important;
     }
 
+    section div.products-container i.slide-right {
+        display:inline;
+    }
+
     header div.search input {
         width:70%;
     }
@@ -1053,6 +1069,10 @@ p.owner a {
 
     div.container {
         width:95% !important;
+    }
+
+    section.brands div.products-container i {
+        display:none;
     }
 
     section div.container {
