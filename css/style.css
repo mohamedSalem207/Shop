@@ -1056,6 +1056,14 @@ p.owner a {
         flex: 0 0 23%;
     }
 
+    header div.login-details {
+        right:245px;
+    }
+
+    div.help-details {
+        right:135px !important;
+    }
+
     section div.container {
         padding:10px !important;
     }
@@ -1075,6 +1083,14 @@ p.owner a {
 
     section.brands div.products-container i {
         display:none;
+    }
+
+    div.help-details {
+        right:165px;
+    }
+
+    header div.login-details {
+        right:280px;
     }
 
     section div.container {
